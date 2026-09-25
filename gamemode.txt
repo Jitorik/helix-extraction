@@ -1,0 +1,12 @@
+"Gamemode"
+{
+    "title"          "Helix RP"
+    "base"           "helix"
+    "category"       "rp"
+    "maps"           "^rp_"
+    "workshopid"     ""
+    
+    "settings"
+    {
+    }
+}
