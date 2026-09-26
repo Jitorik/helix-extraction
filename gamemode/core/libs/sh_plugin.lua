@@ -250,9 +250,6 @@ function ix.plugin.Initialize()
 
 	ix.plugin.LoadFromDir("helix/plugins")
 
-	ix.plugin.Load("schema", engine.ActiveGamemode().."/schema")
-	hook.Run("InitializedSchema")
-
 	ix.plugin.LoadFromDir(engine.ActiveGamemode().."/plugins")
 	hook.Run("InitializedPlugins")
 end
