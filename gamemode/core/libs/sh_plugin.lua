@@ -243,6 +243,18 @@ function ix.plugin.LoadEntities(path)
 	end
 end
 
+function ix.plugin.Initialize()
+	if SERVER then
+		ix.plugin.unloaded = ix.data.Get("unloaded", {}, true, true)
+	end
+
+	ix.plugin.LoadFromDir("helix/plugins")
+
+
+	ix.plugin.LoadFromDir(engine.ActiveGamemode().."/plugins")
+	hook.Run("InitializedPlugins")
+end
+
 function ix.plugin.Get(identifier)
 	return ix.plugin.list[identifier]
 end
